@@ -1,3 +1,8 @@
-The OpenShift `jbossews` cartridge documentation can be found at:
+#Project Manager Helps you to organize tasks, bugs, releases, responsible people in a software development project
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#tomcat
+Steps to set up
+*Install MySql and Restore the backup in the Repo*
+*Open the project in your favorite Java IDE and download necessary maven dependencies*
+*Run the project and Enjoy*
+
+***Developed By Lakshitha Ranasinghe*
