@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Title" class="java.lang.String"/>
+	<parameter name="ResolvedBugs" class="java.lang.String"/>
+	<parameter name="CompletedTasks" class="java.lang.String"/>
+	<parameter name="TestReleasedDate" class="java.lang.String"/>
+	<parameter name="LiveReleasedDate" class="java.lang.String"/>
+	<field name="ID" class="java.lang.String"/>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Type" class="java.lang.String"/>
+	<field name="ReportedBy" class="java.lang.String"/>
+	<field name="ReportedDate" class="java.lang.String"/>
+	<field name="Title" class="java.lang.String"/>
+	<field name="ResolvedBy" class="java.lang.String"/>
+	<group name="Type">
+		<groupExpression><![CDATA[$F{Type}]]></groupExpression>
+		<groupHeader>
+			<band height="29">
+				<textField isStretchWithOverflow="true">
+					<reportElement x="0" y="0" width="89" height="29"/>
+					<textElement textAlignment="Left" lineSpacing="Single">
+						<font fontName="SansSerif" size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{Type}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="118" splitType="Stretch">
+			<textField>
+				<reportElement x="78" y="0" width="404" height="48"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="36" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{Title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="65" width="169" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[No of Resolved Bugs Released : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="85" width="169" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[No of Completed Tasks Released : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="185" y="65" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{ResolvedBugs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="85" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CompletedTasks}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="337" y="65" width="112" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[Test Released Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="85" width="112" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[Live Released Date :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="449" y="65" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{TestReleasedDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="449" y="85" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{LiveReleasedDate}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="16" y="0" width="113" height="48"/>
+				<imageExpression class="java.lang.String"><![CDATA["/var/lib/openshift/576a2bf62d52714e4900006a/app-root/runtime/repo/target/bugmanager/external/img/National_Institute_of_Business_Management_Logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="139" y="9" width="208" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="72" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reported Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="9" width="31" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="0" width="63" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reported By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="9" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="0" width="67" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Resolved By]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="16" y="1" width="31" height="20"/>
+				<textElement textAlignment="Left" lineSpacing="Single">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="347" y="0" width="63" height="21"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ReportedBy}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="410" y="1" width="72" height="20"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ReportedDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="47" y="0" width="92" height="21"/>
+				<textElement lineSpacing="Single">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Title}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="139" y="1" width="208" height="20"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="0" width="67" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ResolvedBy}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

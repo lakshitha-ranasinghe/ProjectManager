@@ -1,0 +1,85 @@
+/**{
+  margin:0;
+  padding:0;
+}*/
+h2.specialH2,p.specialPara{
+  font-size:100%;
+  font-weight:normal;
+}
+ul.specialUList,li.specialList{
+  list-style:none;
+}
+ul.specialUList{
+  overflow:hidden;
+  padding:3em;
+}
+ul.specialUList li.specialList a.specialAnchor{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:20em;
+  width:20em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+ul.specialUList li.specialList{
+  margin:1em;
+  float:left;
+}
+ul.specialUList li.specialList h2.specialH2{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+ul.specialUList li.specialList p.specialPara{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+ul.specialUList li.specialList a.specialAnchor{
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+ul.specialUList li.specialList:nth-child(even) a.specialAnchor{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+ul.specialUList li.specialList:nth-child(3n) a.specialAnchor{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+ul.specialUList li.specialList:nth-child(5n) a.specialAnchor{
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+ul.specialUList li.specialList a.specialAnchor:hover,ul.specialUList li.specialList a.specialAnchor:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+/*ol{text-align:center;}
+ol li{display:inline;padding-right:1em;}
+ol li a{color:#fff;}*/
