@@ -5,4 +5,5 @@ Steps to set up
 *Open the project in your favorite Java IDE and download necessary maven dependencies.. 
 *Run the project and Enjoy..
 
-***Developed By Lakshitha Ranasinghe*
+***Developed By Lakshitha Ranasinghe* 
+ranasinghe5@gmail.com
